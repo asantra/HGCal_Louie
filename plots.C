@@ -1,4 +1,7 @@
+<<<<<<< HEAD
  
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 {
 
 int n1=0;
@@ -8,7 +11,10 @@ float nHGCFiles=880.;
 gStyle->SetOptStat(1) ;
 TFile *_file1 = TFile::Open("HoverE_PH1_A0_PU50_newMVA.root"); 
 TFile *_file2 = TFile::Open("HoverE_PH1_A1k_PU140_newMVA.root"); 
+<<<<<<< HEAD
 //TFile *_file3 = TFile::Open("HoverE_HGC_newMVA.root");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 TFile *_file3 = TFile::Open("HoverE_HGC_newMVA.root"); 
 
 std::cout << " file 1 open " << _file1.IsOpen() << std::endl;
@@ -27,7 +33,11 @@ std::cout << " ts2 : " << ts2->GetEntries() << ", tb2 : " << tb2->GetEntries() <
 std::cout << " ts3 : " << ts3->GetEntries() << ", tb3 : " << tb3->GetEntries() << std::endl;
 
 
+<<<<<<< HEAD
 TFile *tf = new TFile("HGC_photonID_TPplots2.root","RECREATE");
+=======
+TFile *tf = new TFile("HGC_photonID_TPplots.root","RECREATE");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 
 TCanvas *c = new TCanvas("c","c",500,500);
 //--------------> Input Variables <--------------//
@@ -38,6 +48,7 @@ tb1->Draw("sigmaIetaIeta>>b1(100,0,0.08)","abs(etaSC) >1.6 && abs(etaSC)<2.5 && 
 s1->SetLineColor(kRed); s1->SetFillColor(kRed); s1->SetFillStyle(3001);
 s1->DrawNormalized(); b1->DrawNormalized("same");
 c->SaveAs("PH1_A0_PU50_sigmaIetaIeta.pdf");
+<<<<<<< HEAD
 c->SaveAs("PH1_A0_PU50_sigmaIetaIeta.png");
 c->Clear();
 n1=s1->GetEntries();
@@ -69,13 +80,21 @@ c->SaveAs("PH1_A0_PU50_photonIso.pdf");
 c->SaveAs("PH1_A0_PU50_photonIso.png");
 c->Clear();*/
 
+=======
+c->Clear();
+n1=s1->GetEntries();
+
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 ts1->Draw("hoe>>s1(100,0,1)","abs(etaSC) >1.6 && abs(etaSC)<2.5 && pt>30 && pt<100 && matchIndex>-1");
 tb1->Draw("hoe>>b1(100,0,1)","abs(etaSC) >1.6 && abs(etaSC)<2.5 && pt>30 && pt<100");
 s1->SetLineColor(kRed); s1->SetFillColor(kRed); s1->SetFillStyle(3001);
 c->SetLogy(1);
 s1->DrawNormalized(); b1->DrawNormalized("same");
 c->SaveAs("PH1_A0_PU50_hoe.pdf");
+<<<<<<< HEAD
 c->SaveAs("PH1_A0_PU50_hoe.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->SetLogy(0);
 //////---------2
 ts2->Draw("sigmaIetaIeta>>s2(100,0,0.08)","abs(etaSC) >1.6 && abs(etaSC)<2.5 && pt>30 && pt<100 && matchIndex>-1");
@@ -83,7 +102,10 @@ tb2->Draw("sigmaIetaIeta>>b2(100,0,0.08)","abs(etaSC) >1.6 && abs(etaSC)<2.5 && 
 s2->SetLineColor(kRed); s2->SetFillColor(kRed); s2->SetFillStyle(3001);
 s2->DrawNormalized(); b2->DrawNormalized("same");
 c->SaveAs("PH1_A1k_PU140_sigmaIetaIeta.pdf");
+<<<<<<< HEAD
 c->SaveAs("PH1_A1k_PU140_sigmaIetaIeta.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Clear();
 n2=s2->GetEntries();
 
@@ -93,6 +115,7 @@ s2->SetLineColor(kRed); s2->SetFillColor(kRed); s2->SetFillStyle(3001);
 c->SetLogy(1);
 s2->DrawNormalized(); b2->DrawNormalized("same");
 c->SaveAs("PH1_A1k_PU140_hoe.pdf");
+<<<<<<< HEAD
 c->SaveAs("PH1_A1k_PU140_hoe.png");
 c->SetLogy(0);
 c->Clear();
@@ -127,13 +150,21 @@ c->SaveAs("PH1_A1k_PU140_photonIso.png");
 c->SetLogy(0);
 c->Clear();*/
 
+=======
+c->SetLogy(0);
+c->Clear();
+c->Clear();
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 //////---------3
 ts3->Draw("sigmaEtaEta>>s3(100,0,0.025)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100 &&  hoe<0.5 && matchIndex>-1");
 tb3->Draw("sigmaEtaEta>>b3(100,0,0.025)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 &&  hoe<0.5 && pt<100");
 s3->SetLineColor(kRed); s3->SetFillColor(kRed); s3->SetFillStyle(3001);
 s3->DrawNormalized(); b3->DrawNormalized("same");
 c->SaveAs("HGC_sigmaEtaEta.pdf");
+<<<<<<< HEAD
 c->SaveAs("HGC_sigmaEtaEta.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Clear();
 
 ts3->Draw("hoe>>s3(100,0,1)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100 && hoe<0.5 && matchIndex>-1");
@@ -142,6 +173,7 @@ s3->SetLineColor(kRed); s3->SetFillColor(kRed); s3->SetFillStyle(3001);
 c->SetLogy(1);
 s3->DrawNormalized(); b3->DrawNormalized("same");
 c->SaveAs("HGC_hoe.pdf");
+<<<<<<< HEAD
 c->SaveAs("HGC_hoe.png");
 c->SetLogy(0);
 c->Clear();
@@ -176,12 +208,19 @@ c->SaveAs("HGC_photonIso.png");
 c->SetLogy(0);
 c->Clear();*/
 
+=======
+c->SetLogy(0);
+c->Clear();
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 ts3->Draw("lengthCompatibility>>s3(100,-10,10)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100 && matchIndex>-1");
 tb3->Draw("lengthCompatibility>>b3(100,-10,10)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100");
 s3->SetLineColor(kRed); s3->SetFillColor(kRed); s3->SetFillStyle(3001);
 s3->DrawNormalized(); b3->DrawNormalized("same");
 c->SaveAs("HGC_lengthCompatibility.pdf");
+<<<<<<< HEAD
 c->SaveAs("HGC_lengthCompatibility.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Clear();
 /*ts3->Draw("hcalIso>>s3(100,0,20)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100 && matchIndex>-1");
 tb3->Draw("hcalIso>>b3(100,0,20)","abs(etaSC) >1.6 && abs(etaSC)<2.9 && pt>30 && pt<100");
@@ -234,17 +273,26 @@ std::pair < TGraph*, std::pair < float, float> > roc3 = makeROC2(s3 , b3, dummy,
 s1->SetLineColor(kRed); s1->SetFillColor(kRed) ; s1->SetFillStyle(3001);
 s1->DrawNormalized(); b1->DrawNormalized("same");
 c->SaveAs("MVAOutput_PH1_A0_PU50.pdf");
+<<<<<<< HEAD
 c->SaveAs("MVAOutput_PH1_A0_PU50.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		c->Clear();
 s2->SetLineColor(kRed); s2->SetFillColor(kRed) ; s2->SetFillStyle(3001);
 s2->DrawNormalized(); b2->DrawNormalized("same");
 c->SaveAs("MVAOutput_PH1_A1k_PU140.pdf");
+<<<<<<< HEAD
 c->SaveAs("MVAOutput_PH1_A1k_PU140.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		c->Clear();
 s3->SetLineColor(kRed); s3->SetFillColor(kRed) ; s3->SetFillStyle(3001);
 s3->DrawNormalized(); b3->DrawNormalized("same");
 c->SaveAs("MVAOutput_HGC_PU140.pdf");
+<<<<<<< HEAD
 c->SaveAs("MVAOutput_HGC_PU140.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		c->Clear();
 
 TMultiGraph *mul  = new TMultiGraph();
@@ -260,12 +308,19 @@ mul->Draw( "APL" );
 TLegend *tl = new TLegend(0.7,0.8,0.9,0.9);
 tl->AddEntry(roc1.first,"PH1, Age0, PU50","lp");
 tl->AddEntry(roc2.first,"PH1, Age1k, PU140","lp");
+<<<<<<< HEAD
 tl->AddEntry(roc3.first,"HGC PU140 ee18","lp");
+=======
+tl->AddEntry(roc3.first,"HGC PU140","lp");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 
 tl->Draw();
 
 c->SaveAs("ROCs.pdf");
+<<<<<<< HEAD
 c->SaveAs("ROCs.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 
 
 float ph1_a0_pu50_wp1=-999.;
@@ -283,11 +338,19 @@ bool flag2s3=1;
 
 //---------->Determine working points<--------------//
 
+<<<<<<< HEAD
 for (float mva =-1.0 ; mva<1.0 ;mva=mva+0.01){
 
 
 	ostringstream cut0;
 	cut0 <<"abs(etaEcal) >1.6 && abs(etaEcal)<2.5 && pt>30 && pt<100 && matchIndex>-1 && hoe<0.5 && MVA> " <<mva;
+=======
+for (float mva =0.8 ; mva<1.0 ;mva=mva+0.01){
+
+
+	ostringstream cut0;
+	cut0 <<"abs(etaEcal) >1.6 && abs(etaEcal)<2.5 && pt>30 && pt<100 && matchIndex>-1 &&hoe<0.5&& MVA> " <<mva;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 	ts1->Draw("abs(etaEcal)>>s1numtmp(9,1.6,2.5)",cut0.str().c_str());
 	ts1->Draw("abs(etaEcal)>>s1dentmp(9,1.6,2.5)","abs(etaEcal) >1.6 && abs(etaEcal)<2.5 && pt>30 && pt<100");
 	ts2->Draw("abs(etaEcal)>>s2numtmp(9,1.6,2.5)",cut0.str().c_str());
@@ -300,6 +363,7 @@ for (float mva =-1.0 ; mva<1.0 ;mva=mva+0.01){
 	TH1F  *s2dentmp = (TH1F*)gDirectory->Get("s2dentmp");
 	TH1F  *s3numtmp = (TH1F*)gDirectory->Get("s3numtmp");
 	TH1F  *s3dentmp = (TH1F*)gDirectory->Get("s3dentmp");
+<<<<<<< HEAD
 	
 	ostringstream cut1;
 	cut1 <<"abs(etaSC) >1.6 && abs(etaSC)<2.5 && pt>30 && pt<100 && MVA> " <<mva;
@@ -315,6 +379,8 @@ for (float mva =-1.0 ; mva<1.0 ;mva=mva+0.01){
 	TH1F  *s2dentmp2 = (TH1F*)gDirectory->Get("s2dentmp2");
 	TH1F  *s3numtmp2 = (TH1F*)gDirectory->Get("s3numtmp2");
 	TH1F  *s3dentmp2 = (TH1F*)gDirectory->Get("s3dentmp2");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 
 	float as1 =s1numtmp->GetEntries();
 	float bs1 =s1dentmp->GetEntries();
@@ -322,6 +388,7 @@ for (float mva =-1.0 ; mva<1.0 ;mva=mva+0.01){
 	float bs2 =s2dentmp->GetEntries();
 	float as3 =s3numtmp->GetEntries();
 	float bs3 =s3dentmp->GetEntries();
+<<<<<<< HEAD
 	
 	float ab1 =s1numtmp2->GetEntries();
 	float bb1 =s1dentmp2->GetEntries();
@@ -335,34 +402,61 @@ for (float mva =-1.0 ; mva<1.0 ;mva=mva+0.01){
         std::cout << "Phase2 PU200 : " << as3/bs3 << " for  mva: " << mva << std::endl;
 	if (as1/bs1 <0.9 && flag1s1 ) {
 		std::cout<<" PH1_A0_PU50 90% WP -- mva "<< mva << " a/b " << as1/bs1 << " signal: " << as1 << " background: " << ab1 << std::endl;
+=======
+	//std::cout << " DEBUG mva - "<< mva <<", "<< a/b   <<std::endl;
+
+	if (as1/bs1 <0.9 && flag1s1 ) {
+		std::cout<<" PH1_A0_PU50 90% WP -- mva "<< mva << " a/b " << as1/bs1 << std::endl;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		ph1_a0_pu50_wp1 = mva;
 		flag1s1 =0;
 	}
 
 	if (as1/bs1 <0.85 && flag2s1 ) {
+<<<<<<< HEAD
 		std::cout<<" PH1_A0_PU50 85% WP -- mva "<< mva << " a/b " << as1/bs1 << " signal: " << as1 << " background: " <<ab1 << std::endl;
+=======
+		std::cout<<" PH1_A0_PU50 85% WP -- mva "<< mva << " a/b " << as1/bs1 << std::endl;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		ph1_a0_pu50_wp2 = mva;
 		flag2s1 =0;
 	}
 	if (as2/bs2 <0.9 && flag1s2 ) {
+<<<<<<< HEAD
 		std::cout<<" PH1_A1k_PU140 90% WP -- mva "<< mva << " a/b " << as2/bs2 <<" signal: " << as2 << " background: " << ab2 <<  std::endl;
+=======
+		std::cout<<" PH1_A1k_PU140 90% WP -- mva "<< mva << " a/b " << as2/bs2 << std::endl;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		ph1_a1k_pu140_wp1 = mva;
 		flag1s2 =0;
 	}
 
 	if (as2/bs2 <0.85 && flag2s2 ) {
+<<<<<<< HEAD
 		std::cout<<" PH1_A1k_PU140 85% WP -- mva "<< mva << " a/b " << as2/bs2 <<" signal: " << as2 << " background: " << ab2<<  std::endl;
+=======
+		std::cout<<" PH1_A1k_PU140 85% WP -- mva "<< mva << " a/b " << as2/bs2 << std::endl;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		ph1_a1k_pu140_wp2 = mva;
 		flag2s2 =0;
 	}
 	if (as3/bs3 <0.9 && flag1s3 ) {
+<<<<<<< HEAD
 		std::cout<<" HGC_PU200 90% WP -- mva "<< mva << " a/b " << as3/bs3 <<" signal: " << as3 << " background: " <<ab3 <<  std::endl;
+=======
+		std::cout<<" HGC_PU140 90% WP -- mva "<< mva << " a/b " << as3/bs3 << std::endl;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		hgc_pu140_wp1 = mva;
 		flag1s3 =0;
 	}
 
 	if (as3/bs3 <0.85 && flag2s3 ) {
+<<<<<<< HEAD
 		std::cout<<" HGC_PU200 85% WP -- mva "<< mva << " a/b " << as3/bs3 <<" signal: " << as3 << " background: " << ab3 << std::endl;
+=======
+		std::cout<<" HGC_PU140 85% WP -- mva "<< mva << " a/b " << as3/bs3 << std::endl;
+		hgc_pu140_wp2 = mva;
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 		flag2s3 =0;
 	}
 
@@ -475,7 +569,11 @@ tl->AddEntry(b1num,"fake rate (PH1, Age0, PU50)","lp");
 tl->AddEntry(eff2,"efficiency","lp");
 tl->AddEntry(b2num,"fake rate (PH1, Age1k, PU140)","lp");
 tl->AddEntry(eff3,"efficiency","lp");
+<<<<<<< HEAD
 tl->AddEntry(b3num,"fake rate (HGC PU140 ee18)","lp");
+=======
+tl->AddEntry(b3num,"fake rate (HGC PU140)","lp");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 /*
 TGaxis *axis = new TGaxis(gPad->GetUxmax(),
 		gPad->GetUymin(),
@@ -486,13 +584,20 @@ axis->Draw();*/
 TGaxis::SetMaxDigits(2);
 tl->Draw();
 c->SaveAs("Result_vs_eta_wp1.pdf");
+<<<<<<< HEAD
 c->SaveAs("Result_vs_eta_wp1.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Write("Result_vs_eta_wp1");
 
 c->Clear();
 
 TLegend *tl = new TLegend(0.54,0.79,0.88,0.89);
+<<<<<<< HEAD
 TH1F *dummy2 = new TH1F("dummy2","dummy2",100,0,1);
+=======
+TH1F *dummy2 = new TH1F("d","d",100,0,1);
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 //dummy2->SetMarkerColor(kWhite);
 //tl->AddEntry(dummy2,"WP1 - <Eff>=90%","p");
  TPad *pad1 = new TPad("pad1","",0,0,1,1);
@@ -595,7 +700,11 @@ tl->AddEntry(b1num,"fake rate (PH1, Age0, PU50)","lp");
 tl->AddEntry(eff2,"efficiency","lp");
 tl->AddEntry(b2num,"fake rate (PH1, Age1k, PU140)","lp");
 tl->AddEntry(eff3,"efficiency","lp");
+<<<<<<< HEAD
 tl->AddEntry(b3num,"fake rate (HGC PU140 ee18)","lp");
+=======
+tl->AddEntry(b3num,"fake rate (HGC PU140)","lp");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 /*
 TGaxis *axis = new TGaxis(gPad->GetUxmax(),
 		gPad->GetUymin(),
@@ -606,8 +715,12 @@ axis->Draw();*/
 TGaxis::SetMaxDigits(2);
 tl->Draw();
 c->SaveAs("Result_vs_eta_wp2.pdf");
+<<<<<<< HEAD
 c->SaveAs("Result_vs_eta_wp2.png");
 c->Write("Result_vs_eta_wp2");
+=======
+c->Write("Result_vs_eta_wp1");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 
 
 
@@ -730,7 +843,11 @@ tl->AddEntry(b1num,"fake rate (PH1, Age0, PU50)","lp");
 tl->AddEntry(eff2,"efficiency","lp");
 tl->AddEntry(b2num,"fake rate (PH1, Age1k, PU140)","lp");
 tl->AddEntry(eff3,"efficiency","lp");
+<<<<<<< HEAD
 tl->AddEntry(b3num,"fake rate (HGC PU140 ee18)","lp");
+=======
+tl->AddEntry(b3num,"fake rate (HGC PU140)","lp");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 /*
 TGaxis *axis = new TGaxis(gPad->GetUxmax(),
 		gPad->GetUymin(),
@@ -741,7 +858,10 @@ axis->Draw();*/
 TGaxis::SetMaxDigits(3);
 tl->Draw();
 c->SaveAs("Result_vs_pt_wp1.pdf");
+<<<<<<< HEAD
 c->SaveAs("Result_vs_pt_wp1.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Write("Result_vs_pt_wp1");
 
 
@@ -855,7 +975,11 @@ tl->AddEntry(b1num,"fake rate (PH1, Age0, PU50)","lp");
 tl->AddEntry(eff2,"efficiency","lp");
 tl->AddEntry(b2num,"fake rate (PH1, Age1k, PU140)","lp");
 tl->AddEntry(eff3,"efficiency","lp");
+<<<<<<< HEAD
 tl->AddEntry(b3num,"fake rate (HGC PU140 ee18)","lp");
+=======
+tl->AddEntry(b3num,"fake rate (HGC PU140)","lp");
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 /*
 TGaxis *axis = new TGaxis(gPad->GetUxmax(),
 		gPad->GetUymin(),
@@ -866,7 +990,10 @@ axis->Draw();*/
 TGaxis::SetMaxDigits(3);
 tl->Draw();
 c->SaveAs("Result_vs_pt_wp2.pdf");
+<<<<<<< HEAD
 c->SaveAs("Result_vs_pt_wp2.png");
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
 c->Write("Result_vs_pt_wp2");
 
 
@@ -874,6 +1001,9 @@ c->Write("Result_vs_pt_wp2");
 
 
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 53947bf4f00eaf045e8779a3a86e72dda993f037
